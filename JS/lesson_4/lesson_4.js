@@ -236,7 +236,6 @@
 // let max = minNumber3(10, 200, 49999);
 
 
-
 // 4) створити функцію яка приймає три числа та виводить найбільше.
 // (Без Math.min!)
 // console.log('********************************');
@@ -283,7 +282,6 @@
 // }
 
 // let max = maxNumber3(10, 200, 4);
-
 
 
 // 5) створити функцію яка повертає найбільше число з масиву
@@ -630,7 +628,6 @@
 //
 
 
-
 // Створити функцію яка буде переносити елементи зі значенням 0 у кінець
 // масиву, зберігаючи при цьому порядок не нульових значень.
 // Довжина масиву від 2 до 100
@@ -638,7 +635,6 @@
 
 // const array = [0, 2, 6, 9, 18, 6, 0, 0, 8, 4, 94];
 //const arrayExit = [2, 6, 9, 18, 6, 8, 4, 94, 0, 0, 0];
-
 
 
 // const zeros = [];
@@ -761,10 +757,9 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-//////                           F U N C T I O N      (continuation/continuance)                                          //////
+//////                           F U N C T I O N      (continuation/continuance)
 
-
-///
+///   todo continue break
 // time code   0:04:00  RETURN
 // time code  13:40 lexical environment
 // time code  19:45 hoisting (всплиття)
@@ -774,35 +769,30 @@
 // time code  1:22 continue break
 
 
-
 // !!!  return, що у блоці виконання функції, приймає і повертає щось одне.
 // !!!  Якщо необхідно повернути більше лдного значення, необхідно
 // !!!  повернути return об'єкта, масива або - масива об'єктів
 
 
-
-function buyCar(carPrice) {
-    let money = 5000;
-
-    if (carPrice < money) {
-        console.log('Вітаємо з покупкою');
-        money = money - carPrice;
-        console.log('У вас залишилось', money);
-
-        return money;    // повертає щось одне
-    } else {
-        console.log('У вас не вистачає грошей');
-        console.log(carPrice - money, 'не вистачає');
-    }
-}
-
-const change = buyCar(4800);
-const решта = buyCar(2000);
-
-
-console.log(change, 'change');
-console.log(решта, 'решта');
-
+// function buyCar(carPrice) {
+//     let money = 5000;
+//     if (carPrice < money) {
+//         console.log('Вітаємо з покупкою');
+//         money = money - carPrice;
+//         console.log('У вас залишилось', money);
+//
+//         return money;    // повертає щось одне
+//     } else {
+//         console.log('У вас не вистачає грошей');
+//         console.log(carPrice - money, 'не вистачає');
+//     }
+// }
+//
+// const change = buyCar(4800);
+// const решта = buyCar(2000);
+//
+// console.log(change, 'change');
+// console.log(решта, 'решта');
 
 
 // function buyCar(carPrice) {
@@ -828,12 +818,9 @@ console.log(решта, 'решта');
 // console.log(change);
 
 
-
-
 //**********************************************************************//
 //**********************************************************************//
 //**********************************************************************//
-
 
 // {
 //     let a = 20;
@@ -871,18 +858,19 @@ console.log(решта, 'решта');
 //     console.log('TEST TEST TEST');
 // }
 
-
-
+///////////////////////////////////////////////////
+// console.log('*********************************')
+//
 // const dollarsAfterChange = dollarChanger(29, 5000);
 // console.log(dollarsAfterChange);
-
+//
 // function dollarChanger(kurs, uah) {
 //     console.log('welcome to E-market');
 //     console.log('Ви принесли', uah);
-
+//
 //     const dollars = uah / kurs;
 //     console.log('Ось ваші', dollars);
-
+//
 //     // console.log('Ось ваші', Math.floor(uah / kurs), '$');
 //     return dollars;
 // }
@@ -891,45 +879,47 @@ console.log(решта, 'решта');
 //**********************************************************************//
 //**********************************************************************//
 
-//   Early Return Pattern
+//////////////////////////////////
+//     Early Return Pattern    ///
 
-
+//
 // function buyCar(carPrice) {
 //     let money = 5000;
-
+//
 //     if (carPrice > money) {
 //         console.log('У вас не вистачає грошей');
 //         console.log(carPrice - money, '$ не вистачає');
-
+//
 //         return;
 //     }
-
+//
 //     console.log('Вітаємо з покупкою');
 //     money = money - carPrice;
 //     console.log('У вас залишилось', money, '$');
-
+//
 //     return money; // повертає щось одне
-
 // }
-
-// buyCar(3400);
-
+//
+// buyCar(4500);
+//
 // console.log('----------');
-
-// let number = buyCar(3400);
+//
+// let number = buyCar(4000);
 // console.log(number);
 
 
 //**********************************************************************//
 //**********************************************************************//
 
+//                FUNCTION EXPRESSION & FUNCTION DECLARATION           //
+
 // declaration();
 // //expression();
-
+//
 // function declaration() {
 //     console.log('function declaration');
 // }
-
+//
 // const expression = () => {
 //     console.log('NO HOISTING');
 //     console.log('THIS Reference');
@@ -937,7 +927,6 @@ console.log(решта, 'решта');
 //     console.log('SHORT RETURN');
 //     console.log('function expression');
 // };
-
 
 
 // function sumator(a, b) {
@@ -951,18 +940,17 @@ console.log(решта, 'решта');
 // console.log('****************');
 
 
+const sumatorExp1 = (x, y) => {
+    return x + y;
+};
 
-// const sumatorExp1 = (x, y) => {
-//     return x + y;
-// };
+const sumatorExp2 = (x, y) => x + y;
 
-// const sumatorExp2 = (x, y) => x + y;
+let result1 = sumatorExp1(5, 5);
+let result2 = sumatorExp2(5, 5);
 
-// let result1 = sumatorExp1(5, 5);
-// let result2 = sumatorExp2(5, 5);
-
-// console.log(result1);
-// console.log(result2);
+console.log(result1);
+console.log(result2);
 
 
 //   В function declaration Є ARGUMENTS
@@ -1016,7 +1004,6 @@ console.log(решта, 'решта');
 // let names = ['Maks', 'Nata', 'Vova', 'Karina', 'Nik', 'Inessa'];
 
 
-
 // for (const name of names) {
 // if (name.length >= 5) {
 //     continue;
@@ -1024,7 +1011,6 @@ console.log(решта, 'решта');
 
 //     console.log(name);   //  Maks, Nata,  Vova, Nik
 // }
-
 
 
 // for (const name of names) {
