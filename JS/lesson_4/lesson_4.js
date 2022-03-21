@@ -765,7 +765,7 @@
 // time code  19:45 hoisting (всплиття)
 // time code  39:45 Early Return Pattern
 // time code  53:45 Expression function declaration
-// time code  1:11:10 NO Arguments in expression function
+// time code  1:05:10 NO Arguments in expression function
 // time code  1:22 continue break
 
 
@@ -932,50 +932,80 @@
 // function sumator(a, b) {
 //     return a + b;
 // }
-
+//
 // let sumator1 = sumator(2, 2);
 // console.log(sumator1);
-
-
+//
+//
 // console.log('****************');
+//
+//
+// const sumatorExp1 = (x, y) => {
+//     return x + y;
+// };
+//
+// const sumatorExp2 = (x, y) => x + y;
+//
+// let result1 = sumatorExp1(6, 6);
+// let result2 = sumatorExp2(5, 5);
+//
+// console.log(result1);
+// console.log(result2);
 
-
-const sumatorExp1 = (x, y) => {
-    return x + y;
-};
-
-const sumatorExp2 = (x, y) => x + y;
-
-let result1 = sumatorExp1(5, 5);
-let result2 = sumatorExp2(5, 5);
-
-console.log(result1);
-console.log(result2);
-
-
-//   В function declaration Є ARGUMENTS
+///////////////////////////////////////////////
+//
+//     В function declaration Є ARGUMENTS - це ПСЕВДОМАСИВ - об'єкт, який
+//    веде себе як масив, але методи масива до нього не можна застосувати
 
 // function argLogger() {
-//     //console.log(arguments);
-//     // console.log('TEST');
+//     console.log(arguments);
+//     console.log('TEST');
+//     console.log('------------------')
 //     console.log(arguments);     // псевдо масив
 //     console.log('TEST');
-
+//     console.log('------------------')
+//
 //     for (const argument of arguments) {  //псевдо масив можна проітерувати
 //         console.log(argument);          // for, for of, for in & while.
 //     }
-
+// }
+//
+// argLogger(2, [], 4, true, -554, 'hello')
+//
 // console.log('-------------------------------');
 
-//     // ARRAY FROM ARGUMENTS
-//       let from1 = Array.from(arguments);    // 1й варіант
+//     // ARRAY FROM ARGUMENTS (для того, щоб зробити з псевдомасива звичайний МАСИВ)
+
+// function argLogger(one, two, three) {
+//     console.log(arguments);     // псевдо масив
+//     console.log('TEST');
+//     console.log('------------------')
+//
+//     for (const argument of arguments) {  //псевдо масив можна проітерувати
+//         console.log(argument);          // for, for of, for in & while.
+//     }
+//
+//     let from1 = Array.from(arguments);
+//     console.log(from1);
+//
+//     from1.push('hello');
+//     console.log(from1)
+//
+//     return from1;
+// }
+//
+// let newFrom1 = argLogger(3, 5, 6, 999, -1000);
+// console.log(newFrom1)
+
+
+// let from1 = Array.from(arguments);    // 1й варіант
 //     //              OR
 //     // let from1 = new Array(...arguments);  // 2й варіант
 //     //              OR
 //     // let from1 = [...arguments];           // 3й варіант
 
 
-//     from1.push('Hello Array');
+// from1.push('Hello Array');
 //     from1.push('555');
 
 //     return from1;
@@ -986,14 +1016,18 @@ console.log(result2);
 // console.log(newArray);
 
 // console.log('*******************************8');
+// console.log('*******************************8');
+// console.log('*******************************8');
 
-// //  В function expression НЕМАЄ ARGUMENTS
+//////////////////////////////////////////////////////////
+
+// //  !!!  В function expression НЕМАЄ ARGUMENTS !!!  ///
 
 // const func = () => {
 //     console.log(arguments);  // Uncaught ReferenceError:
 //     // arguments is not defined at func
 // };
-
+//
 // func(5443, 56, 1000);
 
 
@@ -1001,22 +1035,23 @@ console.log(result2);
 //  BREAK  (вбиває цикл);
 
 
-// let names = ['Maks', 'Nata', 'Vova', 'Karina', 'Nik', 'Inessa'];
+let names = ['Maks', 'Nastya', 'Deniska', 'Ihor', 'Karina', 'Nick'];
 
 
-// for (const name of names) {
-// if (name.length >= 5) {
-//     continue;
-// }
+for (const name of names) {
+if (name.length >= 5) {
+    continue;  // пропускає імена в яких 5 і > букв;
+}
 
-//     console.log(name);   //  Maks, Nata,  Vova, Nik
-// }
+    console.log(name);   //  Maks, Ihor, Nick;
+}
 
+console.log('---------------------------------')
 
-// for (const name of names) {
-// if (name.length >= 5) {
-//     break;
-// }
+for (const name of names) {
+    if (name.length >= 7) {
+        break;   // повністю вбиває цикл як тsльки доходить до імені в якому 5 і > букв;
+    }
 
-//     console.log(name);   // Maks, Nata, Vova
-// }
+    console.log(name);   // Maks, Nastya;
+}
