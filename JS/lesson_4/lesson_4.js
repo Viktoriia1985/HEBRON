@@ -781,28 +781,27 @@
 
 
 
-// function buyCar(carPrice) {
-//     let money = 5000;
+function buyCar(carPrice) {
+    let money = 5000;
 
-//     if (carPrice < money) {
-//         console.log('Вітаємо з покупкою');
-//         money = money - carPrice;
-//         console.log('У вас залишилось', money);
+    if (carPrice < money) {
+        console.log('Вітаємо з покупкою');
+        money = money - carPrice;
+        console.log('У вас залишилось', money);
 
-//         return money;    // повертає щось одне
-//     } else {
-//         console.log('У вас не вистачає грошей');
-//         console.log(carPrice - money, 'не вистачає');
-//     }
-// }
+        return money;    // повертає щось одне
+    } else {
+        console.log('У вас не вистачає грошей');
+        console.log(carPrice - money, 'не вистачає');
+    }
+}
 
-// const change = buyCar(4800);
-// const решта = buyCar(2000);
+const change = buyCar(4800);
+const решта = buyCar(2000);
 
 
-// console.log(change, 'change');
-// console.log(решта, 'решта');
-
+console.log(change, 'change');
+console.log(решта, 'решта');
 
 
 
