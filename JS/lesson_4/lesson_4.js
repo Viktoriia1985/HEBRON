@@ -360,18 +360,16 @@
 // 8) створити функцію яка приймає масив чисел та повертає
 //середнє арифметичне його значень.
 
-
-const arrAverage = (array) => {
-    let sum = 0;
-    for (const itemOfArray of array) {
-        sum += itemOfArray;
-    }
-    return sum / array.length;
-}
-
-let result = arrAverage([1, 2, 12]);
-console.log(result);
-
+// const arrAverage = (array) => {
+//     let sum = 0;
+//     for (const itemOfArray of array) {
+//         sum += itemOfArray;
+//     }
+//     return sum / array.length;
+// }
+//
+// let result = arrAverage([1, 2, 12, 1]);
+// console.log(result, 'середнє арифметичне');
 
 
 // console.log('***********************');
@@ -397,16 +395,6 @@ console.log(result);
 //масив ключів всіх обєктів
 // EXAMPLE:
 // [{name: 'Dima', age: 13}, {model: 'Camry'}]  ===> [ name, age, model ]
-
-// let arrOfObjects = [{
-//         name: 'Dima',
-//         age: 13
-//     },
-//     {
-//         model: 'Camry',
-//         year: 2020
-//     }
-// ];
 
 // const findKeys = (array) => {
 //     let result = [];
