@@ -153,40 +153,39 @@
 
 // 1) створити функцію яка приймає масив та виводить його
 
-
 // function showIndexOfArray(arr) {
 //     for (const arrIndex in arr) {
 //        console.log(arrIndex);
 //     }
 // }
-
+//
 // showIndexOfArray([10, 34, 'hello', true, undefined, null, 23]);
+//
 //  console.log('***************************');
 
 // function showArrayElements(arr, a) {
 //     console.log(arr);
 //     console.log(a);
-
 // }
-
-// showArrayElements([4, 6, -2000, 6656, 0, -3333], 'second arg');
+// //
+// showArrayElements([4, 6, -2000, 6656, 0, -3333], 'second arg', 6);
 
 // 2) створити функцію яка заповнює масив рандомними числами та виводить його.
 // Для виведення використати попередню функцію.
 
 // console.log('***************************');
-
-// function arrRandom(length, min, min) {
+//
+// function arrRandom(length, min, max) {
 //     array = [];
 //     for (let i = 0; i < length; i++) {
-//         array.push(Math.floor(Math.random() * (min - min)) + min);
+//         array.push(Math.floor(Math.random() * (max - min)) + min);
 //     }
 //     return array;
 // }
-
-// let newArray = arrRandom(5, 10, 35);
+//
+// let newArray = arrRandom(5, 10, 50);
 // console.log(newArray);
-// showArrayElements(newArray, 'hello, array!');
+// showArrayElements(newArray, 'hello new array');
 
 
 // 3) створити функцію яка приймає три числа та виводить найменьше.
@@ -194,19 +193,21 @@
 
 
 //      First
-//
-// function minNumber(a, b, c) {
-//     let array = [a, b, c];
-//     let min = a;
-//     for (const arrayElement of array) {
-//         if (min > arrayElement) {
-//             min = arrayElement
-//         }
-//     }
-//     console.log(min);
-// }
 
-// minNumber(100, 30000, 500);
+function minNumber(a, b, c) {
+    let array = [a, b, c]
+    let min = a;
+    for (const arrayElement of array) {
+        console.log(arrayElement)
+        if (min > arrayElement) {
+            min = arrayElement
+        }
+    }
+    console.log('---------------')
+    console.log(min, 'min number');
+}
+
+minNumber(393, 100, 70)
 
 //      Second
 
@@ -1035,23 +1036,21 @@
 //  BREAK  (вбиває цикл);
 
 
-let names = ['Maks', 'Nastya', 'Deniska', 'Ihor', 'Karina', 'Nick'];
-
-
-for (const name of names) {
-if (name.length >= 5) {
-    continue;  // пропускає імена в яких 5 і > букв;
-}
-
-    console.log(name);   //  Maks, Ihor, Nick;
-}
-
-console.log('---------------------------------')
-
-for (const name of names) {
-    if (name.length >= 7) {
-        break;   // повністю вбиває цикл як тsльки доходить до імені в якому 5 і > букв;
-    }
-
-    console.log(name);   // Maks, Nastya;
-}
+// let names = ['Maks', 'Nastya', 'Deniska', 'Ihor', 'Karina', 'Nick'];
+//
+// for (const name of names) {
+// if (name.length >= 5) {
+//     continue;  // пропускає імена в яких 5 і > букв;
+// }
+//     console.log(name);   //  Maks, Ihor, Nick;
+// }
+//
+// console.log('---------------------------------')
+//
+// for (const name of names) {
+//     if (name.length >= 7) {
+//         break;   // повністю вбиває цикл як тiльки доходить до імені в якому 7 і > букв;
+//     }
+//
+//     console.log(name);   // Maks, Nastya;
+// }
