@@ -443,16 +443,28 @@
 //   результат
 //   [3,5,7,9]
 
+// const sumArray = (array1, array2) => {
+//     let newSumArray = [];
+//     for (let i = 0; i < array1.length; i++) {
+//        newSumArray.push(array1[i] + array2[i]);
+//     }
+//     return newSumArray;
+// }
+//
+// const totalSum = sumArray([1,2,3,4], [2,3,4,5]);
+// console.log(totalSum)
+
+
 // =========================
 // =========================
 
-let arr = [1, 2, 3, 4, 5, 5, 4, 3, 1, 2, 11];
-
-function f(x) {
-    return x.reduce((acc, cur) => acc ^ cur);
-}
-
-console.log(f(arr));
+// let arr = [1, 2, 3, 4, 5, 5, 4, 3, 1, 2, 11];
+//
+// function f(x) {
+//     return x.reduce((acc, cur) => acc ^ cur);
+// }
+//
+// console.log(f(arr));
 
 // let arr = [1, 2, 3, 4, 5, 5, 4, 3, 1, 2, 11];
 
