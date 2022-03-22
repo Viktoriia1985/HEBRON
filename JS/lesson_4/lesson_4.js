@@ -194,47 +194,53 @@
 
 //      First
 
-function minNumber(a, b, c) {
-    let array = [a, b, c]
-    let min = a;
-    for (const arrayElement of array) {
-        console.log(arrayElement)
-        if (min > arrayElement) {
-            min = arrayElement
-        }
-    }
-    console.log('---------------')
-    console.log(min, 'min number');
-}
-
-minNumber(393, 100, 70)
+// function minNumber(a, b, c) {
+//     let array = [a, b, c]
+//     let min = a;
+//     for (const arrayElement of array) {
+//         console.log(arrayElement)
+//         if (min > arrayElement) {
+//             min = arrayElement
+//         }
+//     }
+//     console.log('---------------')
+//     console.log(min, 'min number');
+// }
+//
+// minNumber(393, 100, 70)
 
 //      Second
 
 // function minNumber2(a, b, c) {
 //     let min;
-//     if (a <= b && a <= c) min = a;
-//     if (b <= a && b <= c) min = b;
-//     if (c <= a && c <= b) min = c;
-
-//     console.log(min, 'is min');
+//     if(a<b && a<c) min = a;
+//     if(b<a && b<c) min = b;
+//     if(c<a && c<b) min = c;
+//
+//     console.log(min, 'min number')
+//     console.log('----------------')
+//
 //     return min;
+//
 // }
-
-// let minNumber = minNumber2(10, 200, 3333);
+//
+// const newNumber = minNumber2(22, 44, 6);
+// console.log(newNumber)
 
 //   THIRD
 
 // function minNumber3(a, b, c) {
-//     let max;
+//     let min;
 //     a < b ? min = a : min = b;
 //     min > c ? min = c : false;
-
+//
 //     console.log(min, 'is min');
-//     return max;
+//     console.log('---------------')
+//     return min;
 // }
-
-// let max = minNumber3(10, 200, 49999);
+//
+// let newNumber = minNumber3(10, 200, 49999);
+// console.log(newNumber);
 
 
 // 4) створити функцію яка приймає три числа та виводить найбільше.
@@ -255,7 +261,6 @@ minNumber(393, 100, 70)
 // }
 
 // maxNumber(444, 5, 2222222);
-
 
 //      SECOND
 
@@ -289,20 +294,20 @@ minNumber(393, 100, 70)
 
 // function maxNumber(a, b, c, d, e) {
 //     let array = [a, b, c, d, e];
-//     let max = d;
+//     let max = a;
 //     for (const arrElement of array) {
 //         if (max < arrElement)
 //             max = arrElement;
-
 //     }
+//     console.log(max, 'max number')
+//     console.log('------------------')
 //     return max;
 // }
-
-// let maxNumber1 = maxNumber(100, 20, 30, 40, 9);
+//
+// let maxNumber1 = maxNumber(100, 256, 3000, 40, 9);
 // console.log(maxNumber1);
 
 // console.log('*******************************');
-
 
 //                OR
 
@@ -329,42 +334,45 @@ minNumber(393, 100, 70)
 //     }
 //     return min;
 // }
-
-// let minNumber = findMin([11, 20, 33, 16, 444]);
+//
+// let minNumber = findMin([171, 20, 33, 600, 444]);
 // console.log(minNumber);
 
 
 // 7) створити функцію яка приймає масив чисел, сумує значення елементів
 //масиву та повертає його.
 
-
 // const sumNumbersOfArray = (array) => {
 //     let sum = 0;
-//     //console.log(sum);
-
+//
 //     for (const arrayElement of array) {
-//         sum = sum + arrayElement;
+//         sum += arrayElement;
+//         console.log(arrayElement);
 //     }
+//     console.log(sum)
+//     console.log('----------------')
 //     return sum;
 // };
-
-// let result = sumNumbersOfArray([2, 4, 10, 20, 10]);
+//
+// let result = sumNumbersOfArray([2, 4, 10]);
 // console.log(result);
 
 // 8) створити функцію яка приймає масив чисел та повертає
 //середнє арифметичне його значень.
 
 
-// const arrAverage = (array) => {
-//     let sum = 0;
-//     for (const itemOfArray of array) {
-//         sum += itemOfArray;
-//     }
-//     return sum / array.length;
-// }
+const arrAverage = (array) => {
+    let sum = 0;
+    for (const itemOfArray of array) {
+        sum += itemOfArray;
+    }
+    return sum / array.length;
+}
 
-// let result = arrAverage([1, 2, 3, 4, 5, 12]);
-// console.log(result);
+let result = arrAverage([1, 2, 12]);
+console.log(result);
+
+
 
 // console.log('***********************');
 
