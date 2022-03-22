@@ -446,13 +446,13 @@
 // =========================
 // =========================
 
-// let arr = [1, 2, 3, 4, 5, 5, 4, 3, 1, 2, 11];
+let arr = [1, 2, 3, 4, 5, 5, 4, 3, 1, 2, 11];
 
-// function f(x) {
-//     return x.reduce((acc, cur) => acc ^ cur);
-// }
+function f(x) {
+    return x.reduce((acc, cur) => acc ^ cur);
+}
 
-// console.log(f(arr));
+console.log(f(arr));
 
 // let arr = [1, 2, 3, 4, 5, 5, 4, 3, 1, 2, 11];
 
