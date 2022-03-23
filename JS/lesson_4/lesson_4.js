@@ -454,40 +454,26 @@
 // const totalSum = sumArray([1,2,3,4], [2,3,4,5]);
 // console.log(totalSum)
 
-
 // =========================
 // =========================
-
-// let arr = [1, 2, 3, 4, 5, 5, 4, 3, 1, 2, 11];
 //
-// function f(x) {
-//     return x.reduce((acc, cur) => acc ^ cur);
-// }
-//
-// console.log(f(arr));
-
-// let arr = [1, 2, 3, 4, 5, 5, 4, 3, 1, 2, 11];
-
 // function f(x) {
 //     let result = [];
-
+//
 //     for (let i = 0; i < x.length; i++) {
 //         let count = 0;
-
-
+//
 //         for (let j = 0; j < x.length; j++) {
 //             if (x[i] === x[j]) {
 //                 count++;
 //             }
-
 //         }
 //         if (count % 2 !== 0) result.push(x[i]);
 //     }
 //     return  result.join('');
 // }
-
-
-// console.log(f([1,1,2,2,3]));
+//
+// console.log(f([1,1,2,2,66,66,9]));
 
 // console.log('********************************');
 
@@ -511,38 +497,39 @@
 // повертає найменьше, а виводить найбільше (Math використовувати заборонено);
 
 // function num(x) {
-
+//
 //     let y = x.sort((q,w) => w - q)
 //     let a = y[0]
 //     let b = y[x.length-1]
 //     console.log(a);
 //     return b;
 // }
-
-// console.log(num([12,1,2,34,4,5]));
+//
+// console.log(num([12,1,2,34,4,5,100]));
 
 // function f1(x) {
-
-//     let res = 5;
-//     let min =5;
-
+//     let res = 1;
+//     let min = 1;
+//
 //     for (let i = 0; i < x.length; i++) {
 //         if (x[i] > res) {
 //             res = x[i];
-//             console.log(res, 'res');
+//             // console.log(res, 'res');
 //         }
-
+//         console.log(x[i])
+//         console.log('---------------')
+//
 //         if (min > x[i]) {
 //             min = x[i];
-//             console.log(min, '***');
+//             // console.log(min, '***');
 //         }
-
 //     }
+//
 //     console.log(min, 'min');
 //     return res;
 // }
-
-// console.log(f1([5,77,3, 55, 7, 6666666, 600, 1, 0]));
+//
+// console.log(f1([7, 35, 55, 7, 470, 1]));
 
 
 // - Взяти задачі з завдання 10 та 9 та обєднати їх в одну динамічну функцію.
@@ -557,8 +544,8 @@
 //     year: 2020
 // }
 // ];
-
-
+//
+//
 // function f(x, y) {
 //     switch (y) {
 //         case 'key':
@@ -569,7 +556,7 @@
 //             }
 //             return result;
 //             break;
-
+//
 //         case 'value':
 //             let result1 = [];
 //             for (const object of x) {
@@ -578,11 +565,11 @@
 //             }
 //             return result1;
 //             break;
-
+//
 //             default: return;
 //     }
 // }
-
+//
 // console.log(f(arr1, 'value'));
 
 
@@ -597,15 +584,18 @@
 //     const a = x[y]
 //     const b = x[y + 1]
 //     x[y] = b;
+//     console.log(x[y])
+//
 //     x[y + 1] = a;
+//     console.log(x[y + 1])
 //     // for (let i = y; i < y + 1; i++) {
 //     //     x[y] = x[y + 1];
 //     //     x[y + 1] = x[y];
-
+//     //
 //     // }
 //     return x;
 // }
-
+//
 // console.log(f([9, 8, 0, 4], 1));
 
 
@@ -620,15 +610,16 @@
 // function f(x) {
 //     return x.filter(el => el).concat(x.filter(el => el === 0))
 // }
-
-
-// const f = (x) => [...x.filter(el => el), ...x.filter(el => el === 0)]
-
-
-// console.log(f([0,1,2, undefined,3,4, false, null, NaN, true]));
-
-
 //
+// const f1 = (x) => [...x.filter(el => el), ...x.filter(el => el === 0)]
+//
+// console.log(f([1,0,6,0,3]));
+// console.log(f([0,1,2,3,4]));
+
+
+
+
+
 //     TASK from VityaTasks
 //
 //
