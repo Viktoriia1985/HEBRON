@@ -11,7 +11,7 @@
 // 3) ПОЛІМОРФІЗМ  -  один і той самий метод виконує різну роботу
 //
 
-// На ачому стоїть ООР:
+// На чому стоїть ООР:
 // 1. НАСЛІДУВАННЯ - властивіть дочірнього класу унаслідувати БАТЬКІВСЬКІ властивості.
 // Але не навпаки (батьківський клас не наслідує властивості з дочірнього класу)
 // 2. ІНКАПСУЛЯЦІЯ (приховання)- це властивість вложення більш складної поведіки в якусь просту
@@ -22,33 +22,31 @@
 // Але на основі цього абстрактного класу можна створити будь що.
 //
 
-
-
 // const user = {
 //     name: 'Viktoriia',
 //     age: 36,
-//     sayHello: () => {
+//     sayHello1: () => {
 //         console.log('Hello! My name is', user.name, '. I am', user.age);
 //     }
 // };
-
+//
 // const user2 = {
 //     name: 'Vlada',
 //     age: 32,
 //     sayHello: () => {
-//         console.log('Hello! My name is', user.name, '. I am', user.age);
+//         console.log('Hello! My name is', user2.name, '. I am', user2.age);
 //     }
 // };
-
+//
 // const user3 = {
 //     name: 'Anna',
 //     age: 20,
 //     sayHello: () => {
-//         console.log('Hello! My name is', user.name, '. I am', user.age);
+//         console.log('Hello! My name is', user3.name, '. I am', user3.age);
 //     }
 // };
-
-// user.sayHello();
+//
+// user3.sayHello();
 
 
 // class User {
@@ -56,21 +54,21 @@
 //         this.name = name;
 //         this.age = age;
 //     }
-
+//
 //     sayHello() {
 //         console.log(this.name, 'say HELLO to you!');
 //     }
-
+//
 //     study(title = 'Node JS') {
 //         console.log(this.name, 'is studying', title);
 //     }
-
+//
 // }
-
+//
 // const user = new User('Viktoriia', 26);
 // const vlada = new User('Vlada', 32);
 // const irina = new User('Irina');
-
+//
 // console.log(user);
 // vlada.sayHello();
 // irina.sayHello();
