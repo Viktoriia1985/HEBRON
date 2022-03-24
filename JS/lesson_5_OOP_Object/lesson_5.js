@@ -345,35 +345,34 @@
 // // Для зміни характеритик мають бути свої методи. Мiняти змінну "в лоб" заборонено.
 // // ===
 
-// class CompCopy {
-//     constructor(ram, power, name) {
-//         this.ram = ram;
-//         this.power = power;
-//         this.name = name;
+class CompCopy {
+    constructor(ram, power, name) {
+        this.ram = ram;
+        this.power = power;
+        this.name = name;
 
-//     }
+    }
 
-//     upgradePC(newPower) {
-//         const isMoreThan10Percent = newPower >= this.power * 1.1;
-//         if (isMoreThan10Percent || newPower <= this.power) {
-//             throw new Error('Power not valid');
-//         }
-//         this.power = newPower;
+    upgradePC(newPower) {
+        const isMoreThan10Percent = newPower >= this.power * 1.1;
+        if (isMoreThan10Percent || newPower <= this.power) {
+            throw new Error('Power not valid');
+        }
+        this.power = newPower;
+    }
+}
 
-//     }
-// }
+const newCompCopy = new CompCopy(12, 600, 'LenOVO');
 
-// const newCompCopy = new CompCopy(12, 600, 'LenOVO');
+try {
+    newCompCopy.upgradePC(644);
+    console.log(newCompCopy.power, 'PC power');
+} catch (e) {
+    console.log(e);
+}
 
-// try {
-//     newCompCopy.upgradePC(660);
-//     console.log(newCompCopy.power);
-// } catch (e) {
-//     console.log(e);
-// }
-
-// console.log('******************************');
-// console.log('******************************');
+console.log('******************************');
+console.log('******************************');
 
 // // Від базового ПК необхідно зробити ігровий ПК.
 // // Кількість ФПС має бути рівно в 2 рази більший ніж в звичайного ПК.
