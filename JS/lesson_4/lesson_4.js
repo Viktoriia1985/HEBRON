@@ -745,6 +745,109 @@
 // console.log(f(n2));
 // console.log(f(n3));
 
+//////////////////////////////////////////////////////////////////
+///             TASK
+
+// Сворити функцію яка буде переносити елементи з значенням 0 у кінець маисву.
+// Зберігаючи при цьому порядок не нульових значень.
+// Двожина масиву від 2 до 100
+
+//                        RESOLVE 1
+//
+// function zerosToEnd(arr = []) {
+//     if (!Array.isArray(arr)) {
+//         console.log('This is not array')
+//         return;
+//     }
+//
+//     let zerosCount = 0;
+//     const result = [];
+//
+//     for (const number of arr) {
+//
+//         if (number === 0) {
+//             zerosCount++;
+//         } else {
+//             result.push(number)
+//         }
+//     }
+//
+//     for (let i = 0; i < zerosCount; i++) {
+//         result.push(0);
+//     }
+//     console.log(result);
+// }
+//
+// const array = [0, 2, 6, 9, 18, 6, 0, 0, 8, 4, 94];
+// zerosToEnd(array)
+
+
+//                        RESOLVE 2
+
+// const array1 = [0, 2, 6, 9, 18, 6, 0, 0, 8, 4, 94];
+// // const arrayExit = [2, 6, 9, 18, 6, 8, 4, 94, 0, 0, 0];
+//
+// const zeros1 = [];
+// const result1 = [];
+//
+// for (const number of array1) {
+//     if (number === 0) {
+//         zeros1.push(number)
+//     } else {
+//         result1.push(number)
+//     }
+// }
+//
+// console.log(result1);
+// console.log(zeros1);
+// result1.push(...zeros1);
+// console.log(result1)
+
+//                 RESOLVE 3
+
+// const array3 = [0, 2, 6, 9, 18, 6, 0, 0, 8, 4, 94];
+// // const arrayExit = [2, 6, 9, 18, 6, 8, 4, 94, 0, 0, 0];
+//
+// const zeros3 = [];
+// const result3 = [];
+//
+// for (const number of array3) {
+//     if (number === 0) {
+//         zeros3.push(number)
+//     } else {
+//         result3.push(number)
+//     }
+// }
+//
+// console.log(zeros3);
+// console.log(result3);
+//
+// for (const zero of zeros3) {
+//     result3.push(zero)
+// }
+//
+// console.log(result3)
+
+//                         RESOLVE 4
+
+// Всі цифри 0 мають бути в кінці масиву без зміни порядку інших цифер
+
+// const array1 = [0, 2, 6, 9, 18, 6, 0, 0, 8, 4, 94];
+// // const arrayExit = [2, 6, 9, 18, 6, 8, 4, 94, 0, 0, 0];
+//
+// let newArr = array1.filter(el => el === 0)
+// let newArr2 = array1.filter(el => el !== 0)
+//
+// console.log(newArr)
+// console.log(newArr2)
+//
+// // newArr2.push((array1.filter(el => (el === 0))))
+// // console.log(newArr2.flat(1));
+// //                 OR
+// // newArr2.push(...newArr);
+// // console.log(newArr2)
+
+///////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
