@@ -24,6 +24,8 @@
 // //
 // console.log('******************************');
 // const names = 'Ira;Volodya;Dima;Karina';
+// console.log(names)
+//
 // let strings = names.split(';');
 // console.log(strings);    //   масив  ['Ira', 'Volodya', 'Dima', 'Karina']
 // console.log(typeof strings);    //  object
@@ -33,6 +35,7 @@
 // // JOIN()
 // //
 // let girls = ['Olga', 'Vika', 'Tanya', 'Lera', 'Sveta', 'Galina'];
+// console.log(girls);
 // let s = girls.join('; ');
 // console.log(s);   //  string => Olga, Vika, Tanya, Lera, Sveta, Galina
 // console.log(typeof s);    // string
@@ -250,8 +253,10 @@
 // let newString = filter.sort()
 // console.log(newString);    //   ['Tanya', 'Tina']
 //
+
+// const numbers = [2, 5, 1, 999999999, 28, 3, 88, 91, 975, 11778];
 // let numbers1 = numbers.filter(number => number > 50);
-// console.log(numbers1)
+// console.log(numbers1)   // [999999999, 88, 91, 975, 11778]
 
 // console.log('******************************');
 // console.log('******************************');
@@ -309,7 +314,7 @@
 //
 //
 
-//const numbers = [2, 5, 1, 999999999, 28, 3, 88, 91, 975, 11778];
+// const numbers = [2, 5, 1, 999999999, 28, 3, 88, 91, 975, 11778];
 // const girls = ['Alla', 'Vika', 'Tina', 'Lera', 'Sveta', 'Valeriia', 'Tanya', 'Galina'];
 //
 // girls.forEach((value, index) => {
@@ -320,7 +325,7 @@
 //     }
 //     console.log(value);
 // })
-////////////////////////
+// ////////////////////////
 
 /////////////////
 //
@@ -339,7 +344,6 @@
 /////////////////
 //
 //   SOME() & EVERY()
-//
 //
 //
 // const girls = ['Alla', 'Vika', 'Tina', 'Lera', 'Sveta', 'Valeriia', 'Tanya', 'Galina'];
@@ -451,44 +455,44 @@
 // console.log('******************************');
 // console.log('******************************');
 
-const user = {
-    name: 'Vova',
-    age: 47,
-    car: 'BMW',
-    family: {
-        wifeName: 'Viktoriia',
-        wifeAge: 36
-    },
-    job: {
-        company: 'UIA',
-        occupation: 'pilot',
-        qualification: 'captain',
-        experience: 30
-    },
-}
-
-function getUserValue(keyName) {
-    console.log(keyName);
-    return user[keyName]
-}
-
-
-let nameOfUser = getUserValue('name')
-let ageOfUser = getUserValue('age')
-let carOfUser = getUserValue('car')
-let userWifeName = getUserValue('family')
-let jobOfUser = getUserValue('job')
-
-console.log('----------------------------');
-console.log('----------------------------');
-
-console.log(nameOfUser, ':name');
-console.log(ageOfUser, 'age');
-console.log(carOfUser, ':car');
-console.log(userWifeName.wifeName, 'is Vovas wife');
-console.log(nameOfUser, 'works in', jobOfUser.company,'.He is the best', jobOfUser.occupation, 'of UIA');
-
-
-// TODO reduce splice flat
+// const user = {
+//     name: 'Vova',
+//     age: 47,
+//     car: 'BMW',
+//     family: {
+//         wifeName: 'Viktoriia',
+//         wifeAge: 36
+//     },
+//     job: {
+//         company: 'UIA',
+//         occupation: 'pilot',
+//         qualification: 'captain',
+//         experience: 30
+//     },
+// }
+//
+// function getUserValue(keyName) {
+//     console.log(keyName);
+//     return user[keyName]
+// }
+//
+//
+// let nameOfUser = getUserValue('name')
+// let ageOfUser = getUserValue('age')
+// let carOfUser = getUserValue('car')
+// let userWifeName = getUserValue('family')
+// let jobOfUser = getUserValue('job')
+//
+// console.log('----------------------------');
+// console.log('----------------------------');
+//
+// console.log(nameOfUser, ':name');
+// console.log(ageOfUser, 'age');
+// console.log(carOfUser, ':car');
+// console.log(userWifeName.wifeName, 'is Vovas wife');
+// console.log(nameOfUser, 'works in', jobOfUser.company,'.He is the best', jobOfUser.occupation, 'of UIA');
+//
+//
+// // TODO reduce splice flat
 
 
