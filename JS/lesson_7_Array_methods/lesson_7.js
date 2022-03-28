@@ -474,6 +474,7 @@ function getUserValue(keyName) {
 
 
 let nameOfUser = getUserValue('name')
+let ageOfUser = getUserValue('age')
 let carOfUser = getUserValue('car')
 let userWifeName = getUserValue('family')
 let jobOfUser = getUserValue('job')
@@ -481,8 +482,9 @@ let jobOfUser = getUserValue('job')
 console.log('----------------------------');
 console.log('----------------------------');
 
-console.log(nameOfUser);
-console.log(carOfUser, 'car');
+console.log(nameOfUser, ':name');
+console.log(ageOfUser, 'age');
+console.log(carOfUser, ':car');
 console.log(userWifeName.wifeName, 'is Vovas wife');
 console.log(nameOfUser, 'works in', jobOfUser.company,'.He is the best', jobOfUser.occupation, 'of UIA');
 
