@@ -12,7 +12,6 @@
 //
 //          FLAT()   FLAT()
 //
-//
 
 // const myAwesomeArray = [[1, 2], [3, 4, [7, 7, [8, 9]]], 5]
 //
